@@ -1,0 +1,378 @@
+[
+  {
+    "rune": "ᚱ",
+    "index": 4,
+    "pos": 0
+  },
+  {
+    "rune": "ᛖ",
+    "index": 18,
+    "pos": 1
+  },
+  {
+    "rune": "ᚳ",
+    "index": 5,
+    "pos": 2
+  },
+  {
+    "rune": "ᚢ",
+    "index": 1,
+    "pos": 3
+  },
+  {
+    "rune": "ᚱ",
+    "index": 4,
+    "pos": 4
+  },
+  {
+    "rune": "ᛋ",
+    "index": 15,
+    "pos": 5
+  },
+  {
+    "rune": "ᛁ",
+    "index": 10,
+    "pos": 6
+  },
+  {
+    "rune": "ᚩ",
+    "index": 3,
+    "pos": 7
+  },
+  {
+    "rune": "ᚾ",
+    "index": 9,
+    "pos": 8
+  },
+  {
+    "type": "separator",
+    "val": " "
+  },
+  {
+    "rune": "ᛈ",
+    "index": 13,
+    "pos": 9
+  },
+  {
+    "rune": "ᚱ",
+    "index": 4,
+    "pos": 10
+  },
+  {
+    "rune": "ᛁ",
+    "index": 10,
+    "pos": 11
+  },
+  {
+    "rune": "ᛗ",
+    "index": 19,
+    "pos": 12
+  },
+  {
+    "rune": "ᛖ",
+    "index": 18,
+    "pos": 13
+  },
+  {
+    "type": "separator",
+    "val": " "
+  },
+  {
+    "rune": "ᛋ",
+    "index": 15,
+    "pos": 14
+  },
+  {
+    "rune": "ᛖ",
+    "index": 18,
+    "pos": 15
+  },
+  {
+    "rune": "ᚳ",
+    "index": 5,
+    "pos": 16
+  },
+  {
+    "rune": "ᚱ",
+    "index": 4,
+    "pos": 17
+  },
+  {
+    "rune": "ᛖ",
+    "index": 18,
+    "pos": 18
+  },
+  {
+    "rune": "ᛏ",
+    "index": 16,
+    "pos": 19
+  },
+  {
+    "type": "separator",
+    "val": " "
+  },
+  {
+    "rune": "ᛋ",
+    "index": 15,
+    "pos": 20
+  },
+  {
+    "rune": "ᚳ",
+    "index": 5,
+    "pos": 21
+  },
+  {
+    "rune": "ᚱ",
+    "index": 4,
+    "pos": 22
+  },
+  {
+    "rune": "ᛁ",
+    "index": 10,
+    "pos": 23
+  },
+  {
+    "rune": "ᛈ",
+    "index": 13,
+    "pos": 24
+  },
+  {
+    "rune": "ᛏ",
+    "index": 16,
+    "pos": 25
+  },
+  {
+    "type": "separator",
+    "val": " "
+  },
+  {
+    "rune": "ᛋ",
+    "index": 15,
+    "pos": 26
+  },
+  {
+    "rune": "ᛈ",
+    "index": 13,
+    "pos": 27
+  },
+  {
+    "rune": "ᛁ",
+    "index": 10,
+    "pos": 28
+  },
+  {
+    "rune": "ᚱ",
+    "index": 4,
+    "pos": 29
+  },
+  {
+    "rune": "ᛁ",
+    "index": 10,
+    "pos": 30
+  },
+  {
+    "rune": "ᛏ",
+    "index": 16,
+    "pos": 31
+  },
+  {
+    "type": "separator",
+    "val": " "
+  },
+  {
+    "rune": "ᚳ",
+    "index": 5,
+    "pos": 32
+  },
+  {
+    "rune": "ᚩ",
+    "index": 3,
+    "pos": 33
+  },
+  {
+    "rune": "ᚾ",
+    "index": 9,
+    "pos": 34
+  },
+  {
+    "rune": "ᛋ",
+    "index": 15,
+    "pos": 35
+  },
+  {
+    "rune": "ᛏ",
+    "index": 16,
+    "pos": 36
+  },
+  {
+    "rune": "ᚱ",
+    "index": 4,
+    "pos": 37
+  },
+  {
+    "rune": "ᚪ",
+    "index": 24,
+    "pos": 38
+  },
+  {
+    "rune": "ᛁ",
+    "index": 10,
+    "pos": 39
+  },
+  {
+    "rune": "ᚾ",
+    "index": 9,
+    "pos": 40
+  },
+  {
+    "rune": "ᛏ",
+    "index": 16,
+    "pos": 41
+  },
+  {
+    "type": "separator",
+    "val": " "
+  },
+  {
+    "rune": "ᛚ",
+    "index": 20,
+    "pos": 42
+  },
+  {
+    "rune": "ᛁ",
+    "index": 10,
+    "pos": 43
+  },
+  {
+    "rune": "ᛒ",
+    "index": 17,
+    "pos": 44
+  },
+  {
+    "rune": "ᛖ",
+    "index": 18,
+    "pos": 45
+  },
+  {
+    "rune": "ᚱ",
+    "index": 4,
+    "pos": 46
+  },
+  {
+    "type": "separator",
+    "val": " "
+  },
+  {
+    "rune": "ᛈ",
+    "index": 13,
+    "pos": 47
+  },
+  {
+    "rune": "ᚱ",
+    "index": 4,
+    "pos": 48
+  },
+  {
+    "rune": "ᛁ",
+    "index": 10,
+    "pos": 49
+  },
+  {
+    "rune": "ᛗ",
+    "index": 19,
+    "pos": 50
+  },
+  {
+    "rune": "ᚢ",
+    "index": 1,
+    "pos": 51
+  },
+  {
+    "rune": "ᛋ",
+    "index": 15,
+    "pos": 52
+  },
+  {
+    "type": "separator",
+    "val": " "
+  },
+  {
+    "rune": "ᚷ",
+    "index": 6,
+    "pos": 53
+  },
+  {
+    "rune": "ᚪ",
+    "index": 24,
+    "pos": 54
+  },
+  {
+    "rune": "ᛏ",
+    "index": 16,
+    "pos": 55
+  },
+  {
+    "rune": "ᛖ",
+    "index": 18,
+    "pos": 56
+  },
+  {
+    "type": "separator",
+    "val": " "
+  },
+  {
+    "rune": "ᛈ",
+    "index": 13,
+    "pos": 57
+  },
+  {
+    "rune": "ᚠ",
+    "index": 0,
+    "pos": 58
+  },
+  {
+    "rune": "ᛁ",
+    "index": 10,
+    "pos": 59
+  },
+  {
+    "rune": "ᚠ",
+    "index": 0,
+    "pos": 60
+  },
+  {
+    "rune": "ᛏ",
+    "index": 16,
+    "pos": 61
+  },
+  {
+    "rune": "ᚣ",
+    "index": 26,
+    "pos": 62
+  },
+  {
+    "rune": "ᛋ",
+    "index": 15,
+    "pos": 63
+  },
+  {
+    "rune": "ᛖ",
+    "index": 18,
+    "pos": 64
+  },
+  {
+    "rune": "ᚹ",
+    "index": 7,
+    "pos": 65
+  },
+  {
+    "rune": "ᛖ",
+    "index": 18,
+    "pos": 66
+  },
+  {
+    "rune": "ᚾ",
+    "index": 9,
+    "pos": 67
+  }
+]

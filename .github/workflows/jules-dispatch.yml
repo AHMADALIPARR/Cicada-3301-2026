@@ -1,0 +1,32 @@
+name: Jules Autonomous Coding Agent Orchestrator
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: "Task instructions for Jules autonomous session"
+        required: true
+        default: "Implement hypothesis optimization and review search results"
+  repository_dispatch:
+    types: [jules-session]
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: jules-orchestration
+  cancel-in-progress: false
+jobs:
+  jules-session:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate payload and guardrails
+        run: |
+          echo "Trigger source: ${{ github.event_name }}"
+          echo "Preventing untrusted execution loops and recursive dispatches."
+      - name: Invoke Jules Agent via Official Action / API
+        uses: google-labs-code/jules-invoke@v1
+        with:
+          jules_api_key: ${{ secrets.JULES_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: ${{ github.event.inputs.prompt || github.event.client_payload.prompt || 'Execute cryptanalysis improvement assignment' }}
+          target_branch_prefix: "jules/search-improvement-"

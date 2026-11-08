@@ -1,0 +1,80 @@
+@prefix lp: <http://cicada3301.org/ontology/liber-primus#> .
+@prefix harn: <http://cicada3301.org/ontology/harn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Liber Primus Core Ontology
+lp:LiberPrimusOntology a owl:Ontology ;
+    rdfs:label "Cicada 3301 Liber Primus Domain Ontology" ;
+    owl:versionInfo "2026.1" .
+
+# Layer 1: Cryptographic Artifact Provenance & Primitives
+lp:CryptographicArtifact a owl:Class ;
+    rdfs:label "Cryptographic Artifact" .
+
+lp:FrozenManuscriptPage a owl:Class ;
+    rdfs:subClassOf lp:CryptographicArtifact .
+
+lp:PGPSignature a owl:Class ;
+    rdfs:subClassOf lp:CryptographicArtifact .
+
+lp:hasSha256Fingerprint a owl:DatatypeProperty ;
+    rdfs:domain lp:CryptographicArtifact ;
+    rdfs:range xsd:string .
+
+lp:hasPgpKeyFingerprint a owl:DatatypeProperty ;
+    rdfs:domain lp:PGPSignature ;
+    rdfs:range xsd:string .
+
+# Layer 2: TokenRange & Gematria Primus Transliteration
+lp:GematriaRune a owl:Class ;
+    rdfs:label "29-Symbol Gematria Primus Rune" .
+
+lp:TokenRange a owl:Class ;
+    rdfs:label "Contiguous sequence of runes in manuscript page" .
+
+lp:runeIndex a owl:DatatypeProperty ;
+    rdfs:domain lp:GematriaRune ;
+    rdfs:range xsd:integer .
+
+lp:primeValue a owl:DatatypeProperty ;
+    rdfs:domain lp:GematriaRune ;
+    rdfs:range xsd:integer .
+
+# Layer 3: Transformation Matrices & Keystreams
+lp:TransformationMatrix a owl:Class ;
+    rdfs:label "Reversible mathematical cipher transformation" .
+
+lp:AffineTransformation a owl:Class ;
+    rdfs:subClassOf lp:TransformationMatrix .
+
+lp:PrimeSequenceKeystream a owl:Class ;
+    rdfs:subClassOf lp:TransformationMatrix .
+
+# Layer 4: Verification Obligations & False Path Markers
+lp:VerificationObligation a owl:Class ;
+    rdfs:label "Deterministic cryptographic or semantic condition" .
+
+lp:FalsePathMarker a owl:Class ;
+    rdfs:label "Immutable record of mathematically refuted hypothesis" .
+
+lp:obligationStatus a owl:DatatypeProperty ;
+    rdfs:domain lp:VerificationObligation ;
+    rdfs:range xsd:string .
+
+# Layer 5: Solution Candidates & Closure Statements
+lp:SolutionCandidate a owl:Class ;
+    rdfs:label "Proposed candidate translation of manuscript text" .
+
+lp:ClosureStatement a owl:Class ;
+    rdfs:label "Formal decision record for a candidate or page" .
+
+lp:candidateSha256 a owl:DatatypeProperty ;
+    rdfs:domain lp:SolutionCandidate ;
+    rdfs:range xsd:string .
+
+lp:isAccepted a owl:DatatypeProperty ;
+    rdfs:domain lp:SolutionCandidate ;
+    rdfs:range xsd:boolean .

@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LiberPrimusCandidateResult",
+  "type": "object",
+  "properties": {
+    "candidate_id": {
+      "type": "string"
+    },
+    "hypothesis": {
+      "type": "string"
+    },
+    "input_page_id": {
+      "type": "string"
+    },
+    "input_snapshot_sha256": {
+      "type": "string"
+    },
+    "transformation": {
+      "type": "string"
+    },
+    "key_derivation": {
+      "type": "string"
+    },
+    "horn_rule_trace": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "verification_obligations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "test_outcomes": {
+      "type": "object"
+    },
+    "final_harn_status": {
+      "type": "string",
+      "enum": ["VERIFIED_ACCEPTED", "FALSE_PATH", "UNRESOLVED"]
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "candidate_id",
+    "hypothesis",
+    "input_page_id",
+    "input_snapshot_sha256",
+    "transformation",
+    "key_derivation",
+    "horn_rule_trace",
+    "verification_obligations",
+    "test_outcomes",
+    "final_harn_status"
+  ]
+}
