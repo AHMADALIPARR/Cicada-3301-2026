@@ -1,0 +1,23 @@
+{
+  "sources": [
+    {
+      "source_id": "CICADA_PGP_KEY_2014",
+      "type": "cryptographic_key",
+      "uri": "https://raw.githubusercontent.com/cicada-3301/pgp-keys/main/7A35090F.asc",
+      "fingerprint": "7A35090F12C1AC17C463C70E8A7104A273BA4EB8",
+      "description": "Cicada 3301 authentic 4096-bit RSA signing key"
+    },
+    {
+      "source_id": "LIBER_PRIMUS_ARCHIVE",
+      "type": "corpus_archive",
+      "uri": "https://uncovering-cicada.fandom.com/wiki/Liber_Primus",
+      "description": "Authenticated scans, transcriptions, and cryptographic signatures of Liber Primus"
+    },
+    {
+      "source_id": "LIBER_PRIMUS_TOR_HIDDEN_SERVICE",
+      "type": "onion_historical_mirror",
+      "uri": "http://cicada3301-onion-archive.liber-primus.local",
+      "description": "Historical hidden service snapshot of Liber Primus artifacts"
+    }
+  ]
+}

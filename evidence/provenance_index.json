@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "CICADA_PGP_KEY_2014",
+      "type": "SourceArchive",
+      "uri": "https://raw.githubusercontent.com/cicada-3301/pgp-keys/main/7A35090F.asc",
+      "description": "Cicada 3301 authentic 4096-bit RSA signing key"
+    },
+    {
+      "id": "LIBER_PRIMUS_ARCHIVE",
+      "type": "SourceArchive",
+      "uri": "https://uncovering-cicada.fandom.com/wiki/Liber_Primus",
+      "description": "Authenticated scans, transcriptions, and cryptographic signatures of Liber Primus"
+    },
+    {
+      "id": "LIBER_PRIMUS_TOR_HIDDEN_SERVICE",
+      "type": "SourceArchive",
+      "uri": "http://cicada3301-onion-archive.liber-primus.local",
+      "description": "Historical hidden service snapshot of Liber Primus artifacts"
+    },
+    {
+      "id": "PAGE_00_WELCOME",
+      "type": "FrozenArtifact",
+      "sha256": "eedc397cc1b5248e6982567a62b6b39deaa0ddbd2ce36d20d40f38665efcb74f",
+      "sha512": "c2d569e47001ba7022972b60fa750aec8238165d5aa43425c136cf3a10bb13ff609a614fde7a5e6ad86486ae3e93553c700619ed38c32400e862b650947ce55d",
+      "byte_count": 184,
+      "status": "SOLVED"
+    },
+    {
+      "id": "PAGE_56_PRELUDE",
+      "type": "FrozenArtifact",
+      "sha256": "f6e5bf94b0ce17e52ec6865146ba42a172247d8376a99b6b9f71f9edb94c8661",
+      "sha512": "f9c38b37ab08e39e41325a3bb225fcaa662425cc96cee9e1db9d223994cb5bee3e24a435fdf612af2d200b170201811d04e745b21c3a5b7a14aace512f135802",
+      "byte_count": 166,
+      "status": "SOLVED"
+    },
+    {
+      "id": "PAGE_57_UNSOLVED",
+      "type": "FrozenArtifact",
+      "sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+      "sha512": "817ca15a2000d14fc2e6a9ef72b148cb0ed1d4a072934216bc916c9353ec358bdd702583854c8ac344bd61958ad37a45f93998a18d628337c8933c7161ab339a",
+      "byte_count": 213,
+      "status": "UNSOLVED"
+    },
+    {
+      "id": "PAGE_58_UNSOLVED",
+      "type": "FrozenArtifact",
+      "sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+      "sha512": "71c431b04d46e60abdcbfc3885f9282cfc9599422399bd38838a3f5833ec65f159740e0e431e9ac382b85b954f8ef967e73c620cfd52d0c8dcd9e8d1b8606fc5",
+      "byte_count": 215,
+      "status": "UNSOLVED"
+    }
+  ],
+  "edges": [
+    {
+      "from": "PAGE_00_WELCOME",
+      "to": "LIBER_PRIMUS_ARCHIVE",
+      "relation": "DERIVED_FROM_SOURCE"
+    },
+    {
+      "from": "PAGE_56_PRELUDE",
+      "to": "LIBER_PRIMUS_ARCHIVE",
+      "relation": "DERIVED_FROM_SOURCE"
+    },
+    {
+      "from": "PAGE_57_UNSOLVED",
+      "to": "LIBER_PRIMUS_ARCHIVE",
+      "relation": "DERIVED_FROM_SOURCE"
+    },
+    {
+      "from": "PAGE_58_UNSOLVED",
+      "to": "LIBER_PRIMUS_ARCHIVE",
+      "relation": "DERIVED_FROM_SOURCE"
+    }
+  ],
+  "fingerprint_index": {
+    "eedc397cc1b5248e6982567a62b6b39deaa0ddbd2ce36d20d40f38665efcb74f": "PAGE_00_WELCOME",
+    "f6e5bf94b0ce17e52ec6865146ba42a172247d8376a99b6b9f71f9edb94c8661": "PAGE_56_PRELUDE",
+    "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2": "PAGE_57_UNSOLVED",
+    "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d": "PAGE_58_UNSOLVED"
+  }
+}

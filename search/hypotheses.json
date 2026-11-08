@@ -1,0 +1,32 @@
+{
+  "hypotheses": [
+    {
+      "id": "affine29",
+      "description": "Exhaustive exploration of all (a, b) in Z_29* x Z_29 base-29 affine transformations",
+      "branch_type": "algebraic_modular",
+      "invariants": ["O(t) = (-t) mod 29", "coprimality gcd(a, 29) == 1"],
+      "matrix_runner": "swipl -q -s harn/search.pl -g \"run('affine29')\" -t halt"
+    },
+    {
+      "id": "reverse",
+      "description": "Sequence reversal, token-order inversion, and involution compositions",
+      "branch_type": "spatial_inversion",
+      "invariants": ["rev(rev(S)) == S", "O(O(S)) == S"],
+      "matrix_runner": "swipl -q -s harn/search.pl -g \"run('reverse')\" -t halt"
+    },
+    {
+      "id": "magic-square",
+      "description": "Magic-square spatial permutations and diagonal traversals",
+      "branch_type": "combinatorial_grid",
+      "invariants": ["Row/col sum preservation"],
+      "matrix_runner": "swipl -q -s harn/search.pl -g \"run('magic-square')\" -t halt"
+    },
+    {
+      "id": "prime-sequence",
+      "description": "Stream cipher keystream derived from Sacred Primes and totient sequence",
+      "branch_type": "number_theoretic",
+      "invariants": ["gematria primes modulo 29", "Euler totient recurrence"],
+      "matrix_runner": "swipl -q -s harn/search.pl -g \"run('prime-sequence')\" -t halt"
+    }
+  ]
+}

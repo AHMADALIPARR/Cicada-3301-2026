@@ -1,0 +1,34 @@
+{
+  "verified": true,
+  "proof_count": 4,
+  "records": [
+    {
+      "property": "involution_O_O_t",
+      "status": "PROVEN",
+      "domain": "Z_29 finite domain (exhaustive)",
+      "details": "O(O(t)) == t holds exhaustively over all 29 elements of Z_29",
+      "passed": true
+    },
+    {
+      "property": "affine_round_trip",
+      "status": "PROVEN",
+      "domain": "(Z_29* x Z_29 x Z_29) exhaustive",
+      "details": "Affine round-trip holds for all 28 units, all 29 offsets, all 29 inputs (23,548 checks)",
+      "passed": true
+    },
+    {
+      "property": "gematria_primes_sacred",
+      "status": "PROVEN",
+      "domain": "Gematria Primus prime list (exhaustive)",
+      "details": "All 29 Gematria Primus values are confirmed prime numbers",
+      "passed": true
+    },
+    {
+      "property": "reversal_involution",
+      "status": "PROVEN",
+      "domain": "Arbitrary finite token lists",
+      "details": "Reversal involution holds over arbitrary sequences",
+      "passed": true
+    }
+  ]
+}

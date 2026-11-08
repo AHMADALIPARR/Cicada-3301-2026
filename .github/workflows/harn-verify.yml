@@ -1,0 +1,31 @@
+name: HARN Verification Gates
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  harn-verification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y swi-prolog gnupg
+          python3 -m pip install rdflib pytest
+      - name: Check Curry property proofs
+        run: python3 curry/test_curry_properties.py
+      - name: Run HARN Horn-clause verification engine
+        run: swipl -q -s harn/verify.pl -g main -t halt
+      - name: Run discovery adapter and provenance validation
+        run: python3 search/discovery.py
+      - name: Run test suite
+        run: pytest -v tests/

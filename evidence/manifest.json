@@ -1,0 +1,233 @@
+{
+  "gematria_primus": [
+    {
+      "index": 0,
+      "rune": "ᚠ",
+      "transliteration": "F",
+      "prime": 2
+    },
+    {
+      "index": 1,
+      "rune": "ᚢ",
+      "transliteration": "U",
+      "prime": 3
+    },
+    {
+      "index": 2,
+      "rune": "ᚦ",
+      "transliteration": "TH",
+      "prime": 5
+    },
+    {
+      "index": 3,
+      "rune": "ᚩ",
+      "transliteration": "O",
+      "prime": 7
+    },
+    {
+      "index": 4,
+      "rune": "ᚱ",
+      "transliteration": "R",
+      "prime": 11
+    },
+    {
+      "index": 5,
+      "rune": "ᚳ",
+      "transliteration": "C",
+      "prime": 13
+    },
+    {
+      "index": 6,
+      "rune": "ᚷ",
+      "transliteration": "G",
+      "prime": 17
+    },
+    {
+      "index": 7,
+      "rune": "ᚹ",
+      "transliteration": "W",
+      "prime": 19
+    },
+    {
+      "index": 8,
+      "rune": "ᚻ",
+      "transliteration": "H",
+      "prime": 23
+    },
+    {
+      "index": 9,
+      "rune": "ᚾ",
+      "transliteration": "N",
+      "prime": 29
+    },
+    {
+      "index": 10,
+      "rune": "ᛁ",
+      "transliteration": "I",
+      "prime": 31
+    },
+    {
+      "index": 11,
+      "rune": "ᛄ",
+      "transliteration": "J",
+      "prime": 37
+    },
+    {
+      "index": 12,
+      "rune": "ᛇ",
+      "transliteration": "EO",
+      "prime": 41
+    },
+    {
+      "index": 13,
+      "rune": "ᛈ",
+      "transliteration": "P",
+      "prime": 43
+    },
+    {
+      "index": 14,
+      "rune": "ᛉ",
+      "transliteration": "X",
+      "prime": 47
+    },
+    {
+      "index": 15,
+      "rune": "ᛋ",
+      "transliteration": "S",
+      "prime": 53
+    },
+    {
+      "index": 16,
+      "rune": "ᛏ",
+      "transliteration": "T",
+      "prime": 59
+    },
+    {
+      "index": 17,
+      "rune": "ᛒ",
+      "transliteration": "B",
+      "prime": 61
+    },
+    {
+      "index": 18,
+      "rune": "ᛖ",
+      "transliteration": "E",
+      "prime": 67
+    },
+    {
+      "index": 19,
+      "rune": "ᛗ",
+      "transliteration": "M",
+      "prime": 71
+    },
+    {
+      "index": 20,
+      "rune": "ᛚ",
+      "transliteration": "L",
+      "prime": 73
+    },
+    {
+      "index": 21,
+      "rune": "ᛝ",
+      "transliteration": "ING",
+      "prime": 79
+    },
+    {
+      "index": 22,
+      "rune": "ᛟ",
+      "transliteration": "OE",
+      "prime": 83
+    },
+    {
+      "index": 23,
+      "rune": "ᛞ",
+      "transliteration": "D",
+      "prime": 89
+    },
+    {
+      "index": 24,
+      "rune": "ᚪ",
+      "transliteration": "A",
+      "prime": 97
+    },
+    {
+      "index": 25,
+      "rune": "ᚫ",
+      "transliteration": "AE",
+      "prime": 101
+    },
+    {
+      "index": 26,
+      "rune": "ᚣ",
+      "transliteration": "Y",
+      "prime": 103
+    },
+    {
+      "index": 27,
+      "rune": "ᛡ",
+      "transliteration": "IA",
+      "prime": 107
+    },
+    {
+      "index": 28,
+      "rune": "ᛠ",
+      "transliteration": "EA",
+      "prime": 109
+    }
+  ],
+  "pgp_keys": [
+    {
+      "key_id": "7A35090F",
+      "fingerprint": "7A35090F12C1AC17C463C70E8A7104A273BA4EB8",
+      "user_id": "Cicada 3301",
+      "algorithm": "RSA (4096 bit)",
+      "file": "evidence/raw/cicada_3301.asc"
+    }
+  ],
+  "frozen_artifacts": [
+    {
+      "id": "PAGE_00_WELCOME",
+      "type": "solved_page",
+      "description": "Page 00: A WARNING / WELCOME (Liber Primus introductory page)",
+      "raw_file": "evidence/raw/page_00_runes.txt",
+      "canonical_file": "evidence/canonical/page_00_tokens.json",
+      "sha256": "eedc397cc1b5248e6982567a62b6b39deaa0ddbd2ce36d20d40f38665efcb74f",
+      "provenance": "2014 Liber Primus release",
+      "status": "SOLVED",
+      "known_plaintext": "A WARNING BELIEFE NOTHING FROM THIS BOOC EXCEPT WHAT YOU CNOW TO BE TRUE"
+    },
+    {
+      "id": "PAGE_56_PRELUDE",
+      "type": "solved_page",
+      "description": "Page 56: Preservation of prior instructions & prime sequence",
+      "raw_file": "evidence/raw/page_56_runes.txt",
+      "canonical_file": "evidence/canonical/page_56_tokens.json",
+      "sha256": "f6e5bf94b0ce17e52ec6865146ba42a172247d8376a99b6b9f71f9edb94c8661",
+      "provenance": "2014 Liber Primus release",
+      "status": "SOLVED",
+      "known_plaintext": "SOME WISDOM THE PRIMES ARE SACRED THE TOTIENT FUNCTION IS SACRED"
+    },
+    {
+      "id": "PAGE_57_UNSOLVED",
+      "type": "unsolved_page",
+      "description": "Page 57: Unsolved manuscript page (subject to P57 verification gate)",
+      "raw_file": "evidence/raw/page_57_runes.txt",
+      "canonical_file": "evidence/canonical/page_57_tokens.json",
+      "sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+      "provenance": "2014 Liber Primus release, unsolved corpus",
+      "status": "UNSOLVED",
+      "gate": "P57"
+    },
+    {
+      "id": "PAGE_58_UNSOLVED",
+      "type": "unsolved_page",
+      "description": "Page 58: Unsolved manuscript page (subject to P58 closure gate)",
+      "raw_file": "evidence/raw/page_58_runes.txt",
+      "canonical_file": "evidence/canonical/page_58_tokens.json",
+      "sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+      "provenance": "2014 Liber Primus release, unsolved corpus",
+      "status": "UNSOLVED",
+      "gate": "P58"
+    }
+  ]
+}

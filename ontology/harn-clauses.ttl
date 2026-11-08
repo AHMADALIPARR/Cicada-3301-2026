@@ -1,0 +1,32 @@
+@prefix lp: <http://cicada3301.org/ontology/liber-primus#> .
+@prefix harn: <http://cicada3301.org/ontology/harn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+harn:HarnClausesOntology a owl:Ontology ;
+    rdfs:label "HARN P57/P58 Horn Clause Ontology" .
+
+# P57 Verification Gates (P57-001 through P57-010)
+harn:Gate_P57_001 a harn:GateDefinition ; rdfs:label "TokenRange Coverage Check" .
+harn:Gate_P57_002 a harn:GateDefinition ; rdfs:label "Base-29 Alphabet Validity" .
+harn:Gate_P57_003 a harn:GateDefinition ; rdfs:label "Artifact Provenance Checksum" .
+harn:Gate_P57_004 a harn:GateDefinition ; rdfs:label "Reversibility & Involution Constraint" .
+harn:Gate_P57_005 a harn:GateDefinition ; rdfs:label "Prime Index Sequence Constraint" .
+harn:Gate_P57_006 a harn:GateDefinition ; rdfs:label "Modular Arithmetic Determinism" .
+harn:Gate_P57_007 a harn:GateDefinition ; rdfs:label "Candidate Independence Constraint" .
+harn:Gate_P57_008 a harn:GateDefinition ; rdfs:label "PGP Key Fingerprint Authorization" .
+harn:Gate_P57_009 a harn:GateDefinition ; rdfs:label "Deduplication by Canonical Representation" .
+harn:Gate_P57_010 a harn:GateDefinition ; rdfs:label "Cryptographic Evidence Non-fabrication" .
+
+# P58 Verification Gates (P58-001 through P58-010)
+harn:Gate_P58_001 a harn:GateDefinition ; rdfs:label "VerificationObligation Completeness" .
+harn:Gate_P58_002 a harn:GateDefinition ; rdfs:label "Candidate Cannot Assert Own Acceptance" .
+harn:Gate_P58_003 a harn:GateDefinition ; rdfs:label "Deterministic Decryption Reproducibility" .
+harn:Gate_P58_004 a harn:GateDefinition ; rdfs:label "Entropy and Language Plausibility Metric" .
+harn:Gate_P58_005 a harn:GateDefinition ; rdfs:label "FalsePathMarker Ledger Invariant" .
+harn:Gate_P58_006 a harn:GateDefinition ; rdfs:label "Independent Key Derivation Proof" .
+harn:Gate_P58_007 a harn:GateDefinition ; rdfs:label "Hash Preimage Exact Verification" .
+harn:Gate_P58_008 a harn:GateDefinition ; rdfs:label "OpenPGP Signature Verification Invariant" .
+harn:Gate_P58_009 a harn:GateDefinition ; rdfs:label "Frozen Evidence Immutability Check" .
+harn:Gate_P58_010 a harn:GateDefinition ; rdfs:label "Final Formal Closure Statement Validation" .

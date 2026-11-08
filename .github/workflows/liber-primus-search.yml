@@ -1,0 +1,40 @@
+name: Liber Primus Search
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [liber-primus-search]
+permissions:
+  contents: read
+concurrency:
+  group: liber-primus-search
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install verification tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y swi-prolog gnupg
+      - name: Verify frozen evidence
+        run: swipl -q -s harn/verify.pl -g main -t halt
+  search:
+    needs: verify
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        hypothesis:
+          - affine29
+          - reverse
+          - magic-square
+          - prime-sequence
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run hypothesis
+        env:
+          HYPOTHESIS: ${{ matrix.hypothesis }}
+        run: |
+          swipl -q -s harn/search.pl \
+            -g "run('$HYPOTHESIS')" -t halt
