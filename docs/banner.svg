@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#g)"/>
+  <text x="600" y="90" fill="#58a6ff" font-family="monospace" font-size="36" text-anchor="middle">Cicada 3301 — Liber Primus</text>
+  <text x="600" y="140" fill="#c9d1d9" font-family="monospace" font-size="18" text-anchor="middle">Formal Verification over ℤ/29ℤ</text>
+  <text x="600" y="190" fill="#f0883e" font-family="monospace" font-size="16" text-anchor="middle">ᚠ ᚢ ᚦ ᚩ ᚱ ᚳ ᚷ ᚹ ᚻ ᚾ ᛁ ᛄ ᛇ ᛈ ᛉ ᛋ ᛏ ᛒ ᛖ ᛗ ᛚ ᛝ ᛟ ᛞ ᚪ ᚫ ᚣ ᛡ ᛠ</text>
+  <text x="600" y="240" fill="#7ee787" font-family="monospace" font-size="14" text-anchor="middle">Affine(j, r, t) · Opposite involution · Gematria Primus kernels</text>
+  <text x="600" y="275" fill="#8b949e" font-family="monospace" font-size="12" text-anchor="middle">Human correction of Gemini 3.8 hallucination noise experiment</text>
+</svg>

@@ -1,12 +1,18 @@
 # Cicada 3301 — Liber Primus Cryptanalysis & HARN Verification
 
+![Banner](docs/banner.svg)
+
 An automated, deterministic cryptanalysis and formal evidence verification system for the unsolved pages of Cicada 3301's *Liber Primus*.
+
+![Gematria Primus](docs/gematria-primus.svg)
 
 ```
    ᚠ  ᚢ  ᚦ  ᚩ  ᚱ  ᚳ  ᚷ  ᚹ  ᚻ  ᚾ  ᛁ  ᛄ  ᛇ  ᛈ  ᛉ  ᛋ  ᛏ  ᛒ  ᛖ  ᛗ  ᛚ  ᛝ  ᛟ  ᛞ  ᚪ  ᚫ  ᚣ  ᛡ  ᛠ
   [0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28]
   (2  3  5  7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 103 107 109)
 ```
+
+![Z/29Z](docs/z29-circle.svg)
 
 ---
 
@@ -43,7 +49,7 @@ To eliminate encoding artifacts across heterogeneous execution runtimes, the ini
 1. **Logic Engine**: SWI-Prolog Horn-clause engine evaluating P57 and P58 gates (`prolog/`, `harn/`).
 2. **Formal Verification & Invariants**:
    - Curry functional logic modules proving base-29 involution, reversibility, and signature obligations (`curry/`).
-   - Agda constructive type theory specification formalizing modular invariants and involution theorems over $\mathbb{Z}_{29}$ (`agda/`).
+   - Agda constructive type theory specification formalizing modular invariants and involution theorems over $\mathbb{Z}_{29}$ (`agda/`). Total computational kernels only — no postulates or holes in the core.
 3. **Ontology & Semantics**: 5-layer OWL/RDF ontology enforcing token ranges, closure statements, and candidate self-acceptance prohibitions (`ontology/`).
 4. **Discovery & Provenance**: Canonical byte deduplication engine and provenance index graph (`search/discovery.py`, `evidence/provenance_index.json`).
 5. **Execution Matrix**: GitHub Actions parallel matrix search across affine, reversal, magic square, and prime sequence branches (`.github/workflows/liber-primus-search.yml`).
@@ -69,8 +75,22 @@ swipl -q -s harn/search.pl -g "run('prime-sequence')" -t halt
 PYTHONPATH=. pytest -v tests/
 ```
 
+### Check Agda kernels
+```bash
+agda agda/Affine29.agda
+agda agda/GematriaPrimus.agda
+```
+
 ---
 
 ## Human correction note
 
-Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations.
+Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations. Diagrams in `docs/` provide a visual overview of the Gematria Primus alphabet and the modular field.
+
+---
+
+## Diagrams
+
+- [Banner](docs/banner.svg)
+- [Gematria Primus table](docs/gematria-primus.svg)
+- [Z/29Z circle](docs/z29-circle.svg)

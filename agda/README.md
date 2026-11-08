@@ -2,6 +2,8 @@
 
 Constructive type-theoretic models for the Cicada 3301 Liber Primus invariants over ℤ/29ℤ.
 
+![Gematria Primus](../docs/gematria-primus.svg)
+
 ## Modules
 
 * `Affine29.agda` — Total modular kernels (`%`, `+29`, `*29`), opposite map, and affine transform parameterised by multiplier `j` and addend `r`. No postulates or holes in the computational core.
@@ -17,3 +19,5 @@ Human correction of Gemini 3.8 hallucination noise experiment. Prior agent-gener
 agda agda/Affine29.agda
 agda agda/GematriaPrimus.agda
 ```
+
+Current status: computational cores are total. Full inductive proofs of the involution and affine round-trip still require the Agda standard library monus/DivMod lemmas if machine-checked end-to-end proofs are desired.
