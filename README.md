@@ -1,5 +1,9 @@
 # Cicada-3301-2026 — 3301-PGP
 
+<p align="center">
+  <img src="assets/3301-pgp-retro.gif" alt="3301 Retro PGP Photo — Cicada and authentic key fingerprint" width="640">
+</p>
+
 **Formal, provenance-locked cryptanalysis of the unsolved Liber Primus pages under the authentic Cicada 3301 PGP key.**
 
 This repository is a deterministic, evidence-immutable research system for the remaining unsolved pages of the 2014 *Liber Primus* (the rune manuscript released by Cicada 3301). It treats the problem as a combination of algebraic cryptanalysis over the 29-symbol Gematria Primus alphabet and cryptographic authenticity under the long-standing Cicada signing key **7A35090F**.
@@ -149,6 +153,7 @@ This repository does not claim to have solved the remaining Liber Primus pages. 
 ```
 .
 ├── .github/workflows/     # CI: harn-verify, liber-primus-search, jules-dispatch
+├── assets/                # 3301 retro PGP GIF
 ├── curry/                 # Functional invariants (Affine29, CryptoInvariants, PrimeConstraints)
 ├── evidence/              # Frozen runes, tokens, manifest, PGP key, provenance
 ├── harn/                  # Prolog entry points for verification and search
