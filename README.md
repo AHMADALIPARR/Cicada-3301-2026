@@ -26,6 +26,8 @@ Includes:
 
 Grover's algorithm does not make factoring or decrypting 4096-bit RSA practical. Keyservers were unreachable when these files were added; signature verification still requires a local gpg install and the public key. The file `evidence/raw/cicada_3301.asc` is a truncated stub.
 
+**Note:** The owner initially did not realize the PGP key is used only for authentication (signing messages so solvers can verify they came from 3301). The RSA key was never intended to be broken or decoded; it does not unlock the Liber Primus. The unsolved pages are the actual challenge. The work in `kernels/pgp/` is therefore a modular invariant of the public fingerprint, not a cryptanalytic attack on the modulus.
+
 ![Gematria Primus](docs/gematria-primus.png)
 
 ```
@@ -122,7 +124,9 @@ Rscript -e 'source("kernels/pgp/grover_sim.R"); print(demo(11))'
 
 ## Human correction note
 
-Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations. The pure R and J kernels in `kernels/` are zero-dependency integer array implementations for radix-scaled residual folds and explicit backward DAG reductions. The Mercury DAG PGP reduction and Grover simulation produce deterministic modular invariants of the authentic fingerprint; they do not claim to decrypt the 4096-bit RSA key.
+Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations. The pure R and J kernels in `kernels/` are zero-dependency integer array implementations for radix-scaled residual folds and explicit backward DAG reductions.
+
+The owner did not initially know that the Cicada 3301 PGP key is used only for authentication. The RSA modulus was never meant to be broken; it does not encode or unlock the Liber Primus. The unsolved pages are the actual challenge. The work in `kernels/pgp/` produces deterministic modular invariants of the public fingerprint and does not claim to decrypt the 4096-bit RSA key.
 
 ---
 
