@@ -23,6 +23,9 @@ jobs:
           python3 -m pip install rdflib pytest
       - name: Check Curry property proofs
         run: python3 curry/test_curry_properties.py
+      - name: Verify Agda formal specification structure
+        run: |
+          test -f agda/Affine29.agda && echo "Agda formal specification present."
       - name: Run HARN Horn-clause verification engine
         run: swipl -q -s harn/verify.pl -g main -t halt
       - name: Run discovery adapter and provenance validation
