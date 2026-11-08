@@ -68,3 +68,9 @@ swipl -q -s harn/search.pl -g "run('prime-sequence')" -t halt
 ```bash
 PYTHONPATH=. pytest -v tests/
 ```
+
+---
+
+## Human correction note
+
+Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations.

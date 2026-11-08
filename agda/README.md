@@ -4,8 +4,12 @@ Constructive type-theoretic models for the Cicada 3301 Liber Primus invariants o
 
 ## Modules
 
-* `Affine29.agda` — Modular kernels (`%`, `+_29_`, `*_29_`), opposite involution skeleton, and affine transform parameterised by multiplier `j` and addend `r`.
-* `GematriaPrimus.agda` — Explicit definitions of the 29-rune alphabet. **J (ᛄ, index 11, prime 37, residue 8) and R (ᚱ, index 4, prime 11, residue 11) are fully defined with equality proofs.**
+* `Affine29.agda` — Total modular kernels (`%`, `+29`, `*29`), opposite map, and affine transform parameterised by multiplier `j` and addend `r`. No postulates or holes in the computational core.
+* `GematriaPrimus.agda` — Explicit constants for the J (ᛄ) and R (ᚱ) runes with index, prime, and modular residue proofs by `refl`.
+
+## Human correction note
+
+Human correction of Gemini 3.8 hallucination noise experiment. Prior agent-generated stubs contained broken modular reduction, pure postulates, incomplete pattern matches, and unfilled holes. The computational kernels above replace those with total functions that match the Curry reference implementation.
 
 ## Verification
 
