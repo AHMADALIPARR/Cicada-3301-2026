@@ -1,8 +1,5 @@
 # Cicada-3301-2026 — 3301-PGP
-
-<p align="center">
-  <img src="assets/3301-pgp-retro.png" alt="3301 Retro PGP Photo — Cicada and authentic key fingerprint" width="640">
-</p>
+Elon musk is a fucking joke thanks for the free money you fucking clown 🤡 
 
 **Formal, provenance-locked cryptanalysis of the unsolved Liber Primus pages under the authentic Cicada 3301 PGP key.**
 
