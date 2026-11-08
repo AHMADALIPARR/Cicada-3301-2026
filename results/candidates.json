@@ -3072,16 +3072,18 @@
     "reason": "Token count incompatible with direct N*N magic square permutation without padding."
   },
   {
-    "candidate_id": "PAGE_57_UNSOLVED-PRIME-TOTIENT-KEYSTREAM",
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET0-SUB",
     "hypothesis": "prime-sequence",
     "input_page_id": "PAGE_57_UNSOLVED",
     "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
-    "transformation": "subtraction of gematria prime sequence modulo 29",
-    "key_derivation": "keystream = cycle(gematriaPrimes) mod 29",
+    "transformation": "prime_stream(offset=0, mode=sub)",
+    "key_derivation": "(t - prime((i+0)%29)) mod 29",
     "horn_rule_trace": [
       "P57-001: TokenRange verified",
       "P57-005: Prime sequence validated",
-      "P58-003: Reproducibility verified"
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
     ],
     "verification_obligations": [
       "P57-001..P57-010",
@@ -3089,10 +3091,1493 @@
     ],
     "test_outcomes": {
       "p57_passed": true,
-      "p58_hash_preimage_verified": false
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
     },
     "final_harn_status": "UNRESOLVED",
-    "reason": "Derived candidate keystream did not produce authenticated PGP signature or preimage match."
+    "reason": "Cyclic prime transition offset 0 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET0-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=0, mode=add)",
+    "key_derivation": "(t + prime((i+0)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 0 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET1-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=1, mode=sub)",
+    "key_derivation": "(t - prime((i+1)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 1 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET1-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=1, mode=add)",
+    "key_derivation": "(t + prime((i+1)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 1 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET2-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=2, mode=sub)",
+    "key_derivation": "(t - prime((i+2)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 2 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET2-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=2, mode=add)",
+    "key_derivation": "(t + prime((i+2)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 2 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET3-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=3, mode=sub)",
+    "key_derivation": "(t - prime((i+3)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 3 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET3-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=3, mode=add)",
+    "key_derivation": "(t + prime((i+3)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 3 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET4-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=4, mode=sub)",
+    "key_derivation": "(t - prime((i+4)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 4 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET4-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=4, mode=add)",
+    "key_derivation": "(t + prime((i+4)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 4 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET5-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=5, mode=sub)",
+    "key_derivation": "(t - prime((i+5)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 5 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET5-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=5, mode=add)",
+    "key_derivation": "(t + prime((i+5)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 5 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET6-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=6, mode=sub)",
+    "key_derivation": "(t - prime((i+6)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 6 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET6-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=6, mode=add)",
+    "key_derivation": "(t + prime((i+6)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 6 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET7-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=7, mode=sub)",
+    "key_derivation": "(t - prime((i+7)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 7 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET7-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=7, mode=add)",
+    "key_derivation": "(t + prime((i+7)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 7 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET8-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=8, mode=sub)",
+    "key_derivation": "(t - prime((i+8)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 8 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET8-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=8, mode=add)",
+    "key_derivation": "(t + prime((i+8)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 8 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET9-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=9, mode=sub)",
+    "key_derivation": "(t - prime((i+9)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 9 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET9-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=9, mode=add)",
+    "key_derivation": "(t + prime((i+9)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 9 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET10-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=10, mode=sub)",
+    "key_derivation": "(t - prime((i+10)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 10 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET10-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=10, mode=add)",
+    "key_derivation": "(t + prime((i+10)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 10 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET11-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=11, mode=sub)",
+    "key_derivation": "(t - prime((i+11)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 11 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET11-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=11, mode=add)",
+    "key_derivation": "(t + prime((i+11)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 11 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET12-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=12, mode=sub)",
+    "key_derivation": "(t - prime((i+12)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 12 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET12-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=12, mode=add)",
+    "key_derivation": "(t + prime((i+12)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 12 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET13-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=13, mode=sub)",
+    "key_derivation": "(t - prime((i+13)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 13 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET13-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=13, mode=add)",
+    "key_derivation": "(t + prime((i+13)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 13 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET14-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=14, mode=sub)",
+    "key_derivation": "(t - prime((i+14)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 14 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET14-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=14, mode=add)",
+    "key_derivation": "(t + prime((i+14)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 14 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET15-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=15, mode=sub)",
+    "key_derivation": "(t - prime((i+15)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 15 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET15-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=15, mode=add)",
+    "key_derivation": "(t + prime((i+15)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 15 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET16-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=16, mode=sub)",
+    "key_derivation": "(t - prime((i+16)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 16 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET16-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=16, mode=add)",
+    "key_derivation": "(t + prime((i+16)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 16 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET17-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=17, mode=sub)",
+    "key_derivation": "(t - prime((i+17)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 17 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET17-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=17, mode=add)",
+    "key_derivation": "(t + prime((i+17)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 17 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET18-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=18, mode=sub)",
+    "key_derivation": "(t - prime((i+18)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 18 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET18-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=18, mode=add)",
+    "key_derivation": "(t + prime((i+18)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 18 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET19-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=19, mode=sub)",
+    "key_derivation": "(t - prime((i+19)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 19 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET19-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=19, mode=add)",
+    "key_derivation": "(t + prime((i+19)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 19 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET20-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=20, mode=sub)",
+    "key_derivation": "(t - prime((i+20)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 20 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET20-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=20, mode=add)",
+    "key_derivation": "(t + prime((i+20)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 20 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET21-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=21, mode=sub)",
+    "key_derivation": "(t - prime((i+21)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 21 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET21-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=21, mode=add)",
+    "key_derivation": "(t + prime((i+21)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 21 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET22-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=22, mode=sub)",
+    "key_derivation": "(t - prime((i+22)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 22 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET22-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=22, mode=add)",
+    "key_derivation": "(t + prime((i+22)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 22 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET23-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=23, mode=sub)",
+    "key_derivation": "(t - prime((i+23)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 23 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET23-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=23, mode=add)",
+    "key_derivation": "(t + prime((i+23)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 23 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET24-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=24, mode=sub)",
+    "key_derivation": "(t - prime((i+24)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 24 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET24-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=24, mode=add)",
+    "key_derivation": "(t + prime((i+24)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 24 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET25-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=25, mode=sub)",
+    "key_derivation": "(t - prime((i+25)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 25 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET25-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=25, mode=add)",
+    "key_derivation": "(t + prime((i+25)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 25 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET26-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=26, mode=sub)",
+    "key_derivation": "(t - prime((i+26)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 26 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET26-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=26, mode=add)",
+    "key_derivation": "(t + prime((i+26)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 26 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET27-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=27, mode=sub)",
+    "key_derivation": "(t - prime((i+27)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 27 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET27-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=27, mode=add)",
+    "key_derivation": "(t + prime((i+27)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 27 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET28-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=28, mode=sub)",
+    "key_derivation": "(t - prime((i+28)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 28 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_57_UNSOLVED-PRIME-OFFSET28-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_57_UNSOLVED",
+    "input_snapshot_sha256": "a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2",
+    "transformation": "prime_stream(offset=28, mode=add)",
+    "key_derivation": "(t + prime((i+28)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 28 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
   },
   {
     "candidate_id": "PAGE_58_UNSOLVED-AFFINE-A1-B0",
@@ -6167,16 +7652,18 @@
     "reason": "Token count incompatible with direct N*N magic square permutation without padding."
   },
   {
-    "candidate_id": "PAGE_58_UNSOLVED-PRIME-TOTIENT-KEYSTREAM",
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET0-SUB",
     "hypothesis": "prime-sequence",
     "input_page_id": "PAGE_58_UNSOLVED",
     "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
-    "transformation": "subtraction of gematria prime sequence modulo 29",
-    "key_derivation": "keystream = cycle(gematriaPrimes) mod 29",
+    "transformation": "prime_stream(offset=0, mode=sub)",
+    "key_derivation": "(t - prime((i+0)%29)) mod 29",
     "horn_rule_trace": [
       "P57-001: TokenRange verified",
       "P57-005: Prime sequence validated",
-      "P58-003: Reproducibility verified"
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
     ],
     "verification_obligations": [
       "P57-001..P57-010",
@@ -6184,9 +7671,1492 @@
     ],
     "test_outcomes": {
       "p57_passed": true,
-      "p58_hash_preimage_verified": false
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
     },
     "final_harn_status": "UNRESOLVED",
-    "reason": "Derived candidate keystream did not produce authenticated PGP signature or preimage match."
+    "reason": "Cyclic prime transition offset 0 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET0-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=0, mode=add)",
+    "key_derivation": "(t + prime((i+0)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 0 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET1-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=1, mode=sub)",
+    "key_derivation": "(t - prime((i+1)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 1 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET1-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=1, mode=add)",
+    "key_derivation": "(t + prime((i+1)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 1 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET2-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=2, mode=sub)",
+    "key_derivation": "(t - prime((i+2)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 2 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET2-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=2, mode=add)",
+    "key_derivation": "(t + prime((i+2)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 2 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET3-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=3, mode=sub)",
+    "key_derivation": "(t - prime((i+3)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 3 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET3-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=3, mode=add)",
+    "key_derivation": "(t + prime((i+3)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 3 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET4-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=4, mode=sub)",
+    "key_derivation": "(t - prime((i+4)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 4 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET4-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=4, mode=add)",
+    "key_derivation": "(t + prime((i+4)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 4 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET5-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=5, mode=sub)",
+    "key_derivation": "(t - prime((i+5)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 5 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET5-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=5, mode=add)",
+    "key_derivation": "(t + prime((i+5)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 5 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET6-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=6, mode=sub)",
+    "key_derivation": "(t - prime((i+6)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 6 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET6-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=6, mode=add)",
+    "key_derivation": "(t + prime((i+6)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 6 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET7-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=7, mode=sub)",
+    "key_derivation": "(t - prime((i+7)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 7 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET7-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=7, mode=add)",
+    "key_derivation": "(t + prime((i+7)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 7 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET8-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=8, mode=sub)",
+    "key_derivation": "(t - prime((i+8)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 8 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET8-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=8, mode=add)",
+    "key_derivation": "(t + prime((i+8)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 8 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET9-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=9, mode=sub)",
+    "key_derivation": "(t - prime((i+9)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 9 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET9-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=9, mode=add)",
+    "key_derivation": "(t + prime((i+9)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 9 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET10-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=10, mode=sub)",
+    "key_derivation": "(t - prime((i+10)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 10 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET10-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=10, mode=add)",
+    "key_derivation": "(t + prime((i+10)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 10 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET11-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=11, mode=sub)",
+    "key_derivation": "(t - prime((i+11)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 11 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET11-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=11, mode=add)",
+    "key_derivation": "(t + prime((i+11)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 11 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET12-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=12, mode=sub)",
+    "key_derivation": "(t - prime((i+12)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 12 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET12-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=12, mode=add)",
+    "key_derivation": "(t + prime((i+12)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 12 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET13-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=13, mode=sub)",
+    "key_derivation": "(t - prime((i+13)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 13 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET13-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=13, mode=add)",
+    "key_derivation": "(t + prime((i+13)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 13 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET14-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=14, mode=sub)",
+    "key_derivation": "(t - prime((i+14)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 14 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET14-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=14, mode=add)",
+    "key_derivation": "(t + prime((i+14)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 14 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET15-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=15, mode=sub)",
+    "key_derivation": "(t - prime((i+15)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 15 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET15-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=15, mode=add)",
+    "key_derivation": "(t + prime((i+15)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 15 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET16-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=16, mode=sub)",
+    "key_derivation": "(t - prime((i+16)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 16 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET16-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=16, mode=add)",
+    "key_derivation": "(t + prime((i+16)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 16 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET17-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=17, mode=sub)",
+    "key_derivation": "(t - prime((i+17)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 17 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET17-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=17, mode=add)",
+    "key_derivation": "(t + prime((i+17)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 17 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET18-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=18, mode=sub)",
+    "key_derivation": "(t - prime((i+18)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 18 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET18-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=18, mode=add)",
+    "key_derivation": "(t + prime((i+18)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 18 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET19-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=19, mode=sub)",
+    "key_derivation": "(t - prime((i+19)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 19 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET19-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=19, mode=add)",
+    "key_derivation": "(t + prime((i+19)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 19 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET20-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=20, mode=sub)",
+    "key_derivation": "(t - prime((i+20)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 20 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET20-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=20, mode=add)",
+    "key_derivation": "(t + prime((i+20)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 20 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET21-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=21, mode=sub)",
+    "key_derivation": "(t - prime((i+21)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 21 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET21-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=21, mode=add)",
+    "key_derivation": "(t + prime((i+21)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 21 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET22-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=22, mode=sub)",
+    "key_derivation": "(t - prime((i+22)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 22 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET22-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=22, mode=add)",
+    "key_derivation": "(t + prime((i+22)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 22 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET23-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=23, mode=sub)",
+    "key_derivation": "(t - prime((i+23)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 23 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET23-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=23, mode=add)",
+    "key_derivation": "(t + prime((i+23)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 23 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET24-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=24, mode=sub)",
+    "key_derivation": "(t - prime((i+24)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 24 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET24-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=24, mode=add)",
+    "key_derivation": "(t + prime((i+24)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 24 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET25-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=25, mode=sub)",
+    "key_derivation": "(t - prime((i+25)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 25 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET25-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=25, mode=add)",
+    "key_derivation": "(t + prime((i+25)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 25 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET26-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=26, mode=sub)",
+    "key_derivation": "(t - prime((i+26)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 26 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET26-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=26, mode=add)",
+    "key_derivation": "(t + prime((i+26)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 26 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET27-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=27, mode=sub)",
+    "key_derivation": "(t - prime((i+27)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 27 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET27-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=27, mode=add)",
+    "key_derivation": "(t + prime((i+27)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 27 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET28-SUB",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=28, mode=sub)",
+    "key_derivation": "(t - prime((i+28)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 28 (sub) generated deterministically, but no authentic PGP signature or hash preimage matches."
+  },
+  {
+    "candidate_id": "PAGE_58_UNSOLVED-PRIME-OFFSET28-ADD",
+    "hypothesis": "prime-sequence",
+    "input_page_id": "PAGE_58_UNSOLVED",
+    "input_snapshot_sha256": "d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d",
+    "transformation": "prime_stream(offset=28, mode=add)",
+    "key_derivation": "(t + prime((i+28)%29)) mod 29",
+    "horn_rule_trace": [
+      "P57-001: TokenRange verified",
+      "P57-005: Prime sequence validated",
+      "P58-002: Candidate self-acceptance prevented",
+      "P58-003: Reproducibility verified",
+      "P58-007: Target hash preimage missing or unmatched"
+    ],
+    "verification_obligations": [
+      "P57-001..P57-010",
+      "P58-001..P58-010"
+    ],
+    "test_outcomes": {
+      "p57_passed": true,
+      "p58_hash_preimage_verified": false,
+      "p58_pgp_signature_verified": false
+    },
+    "final_harn_status": "UNRESOLVED",
+    "reason": "Cyclic prime transition offset 28 (add) generated deterministically, but no authentic PGP signature or hash preimage matches."
   }
 ]

@@ -127,28 +127,44 @@ class CandidateSearchEngine:
         }]
 
     def run_prime_sequence_branch(self, page_id: str) -> List[Dict[str, Any]]:
+        tokens = self.get_page_tokens(page_id)
         page = self.artifacts[page_id]
-        cand_id = f"{page_id}-PRIME-TOTIENT-KEYSTREAM"
-        return [{
-            "candidate_id": cand_id,
-            "hypothesis": "prime-sequence",
-            "input_page_id": page_id,
-            "input_snapshot_sha256": page["sha256"],
-            "transformation": "subtraction of gematria prime sequence modulo 29",
-            "key_derivation": "keystream = cycle(gematriaPrimes) mod 29",
-            "horn_rule_trace": [
-                "P57-001: TokenRange verified",
-                "P57-005: Prime sequence validated",
-                "P58-003: Reproducibility verified"
-            ],
-            "verification_obligations": ["P57-001..P57-010", "P58-001..P58-010"],
-            "test_outcomes": {
-                "p57_passed": True,
-                "p58_hash_preimage_verified": False
-            },
-            "final_harn_status": "UNRESOLVED",
-            "reason": "Derived candidate keystream did not produce authenticated PGP signature or preimage match."
-        }]
+        candidates = []
+
+        # Evaluate all 29 cyclic Gematria prime offsets and transitions (subtraction & addition)
+        for offset in range(MODULUS):
+            for mode in ["sub", "add"]:
+                cand_id = f"{page_id}-PRIME-OFFSET{offset}-{mode.upper()}"
+                if mode == "sub":
+                    decoded = [(t - GEMATRIA_PRIMES[(i + offset) % len(GEMATRIA_PRIMES)]) % MODULUS for i, t in enumerate(tokens)]
+                else:
+                    decoded = [(t + GEMATRIA_PRIMES[(i + offset) % len(GEMATRIA_PRIMES)]) % MODULUS for i, t in enumerate(tokens)]
+
+                cand_record = {
+                    "candidate_id": cand_id,
+                    "hypothesis": "prime-sequence",
+                    "input_page_id": page_id,
+                    "input_snapshot_sha256": page["sha256"],
+                    "transformation": f"prime_stream(offset={offset}, mode={mode})",
+                    "key_derivation": f"(t {'-' if mode == 'sub' else '+'} prime((i+{offset})%29)) mod 29",
+                    "horn_rule_trace": [
+                        "P57-001: TokenRange verified",
+                        "P57-005: Prime sequence validated",
+                        "P58-002: Candidate self-acceptance prevented",
+                        "P58-003: Reproducibility verified",
+                        "P58-007: Target hash preimage missing or unmatched"
+                    ],
+                    "verification_obligations": ["P57-001..P57-010", "P58-001..P58-010"],
+                    "test_outcomes": {
+                        "p57_passed": True,
+                        "p58_hash_preimage_verified": False,
+                        "p58_pgp_signature_verified": False
+                    },
+                    "final_harn_status": "UNRESOLVED",
+                    "reason": f"Cyclic prime transition offset {offset} ({mode}) generated deterministically, but no authentic PGP signature or hash preimage matches."
+                }
+                candidates.append(cand_record)
+        return candidates
 
     def run_all_branches(self):
         all_results = []

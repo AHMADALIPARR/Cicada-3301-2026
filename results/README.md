@@ -1,9 +1,9 @@
 # HARN Search Results & Verification Summary
 
-- Total Candidate Evaluations: 230
+- Total Candidate Evaluations: 344
 - Verified Accepted Solutions: 0
 - False Paths Recorded (Refuted): 4
-- Unresolved Candidates: 226
+- Unresolved Candidates: 340
 
 ## Hypothesis Breakdown
 
