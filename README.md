@@ -13,6 +13,16 @@ Zero-dependency integer kernels for radix-scaled residual folds and explicit bac
 
 These map forward reductions to exact backward DAG nodes over integer tensors. Target: 0 max absolute error on routed predictions.
 
+## Mercury DAG PGP Reduction
+
+Deterministic integer DAG fold of the authentic Cicada 3301 public key fingerprint over \(\mathbb{Z}_{29}\).
+
+- Key ID: `7A35090F`
+- Fingerprint: `6D854CD7933322A601C3286D181F01E57A35090F`
+- Implementation: [`kernels/pgp/mercury_dag_pgp.R`](kernels/pgp/mercury_dag_pgp.R)
+
+The reduction produces a reproducible modular invariant. It does not decrypt or factor the 4096-bit RSA modulus. The file `evidence/raw/cicada_3301.asc` is a truncated stub; the fingerprint above is the authentic public value.
+
 ![Gematria Primus](docs/gematria-primus.png)
 
 ```
@@ -38,7 +48,7 @@ Each plate in the manuscript exists simultaneously as raw visual illumination an
 | **Page 56** | `evidence/raw/page_56_runes.txt` | Sacred Primes & Totient Inscription | `f6e5bf94b0ce17e52ec6865146ba42a172247d8376a99b6b9f71f9edb94c8661` | **SOLVED** |
 | **Page 57** | `evidence/raw/page_57_runes.txt` | Unsolved Manuscript Plate (P57 Gate) | `a69ab0fbc4183b97db1ecac72dc8cd8f895e1daa528f38a266fee603f6aa9fd2` | **UNSOLVED** |
 | **Page 58** | `evidence/raw/page_58_runes.txt` | Unsolved Manuscript Plate (P58 Gate) | `d7e02f37f3337e31751b1dfbf7c1ff4db68d5a702818a397535c1e572688f95d` | **UNSOLVED** |
-| **3301 PGP** | `evidence/raw/cicada_3301.asc` | Authentic Key ID `7A35090F` (4096-bit RSA) | `7A35090F12C1AC17C463C70E8A7104A273BA4EB8` | **IMMUTABLE** |
+| **3301 PGP** | `evidence/raw/cicada_3301.asc` | Authentic Key ID `7A35090F` (4096-bit RSA) | `6D854CD7933322A601C3286D181F01E57A35090F` | **IMMUTABLE** |
 
 The manuscript plates are tokenized strictly through `evidence/canonical/`, binding each rune to its Gematria Primus prime coordinate and index over the modular finite field \(\mathbb{Z}_{29}\).
 
@@ -60,10 +70,11 @@ To eliminate encoding artifacts across heterogeneous execution runtimes, the ini
    - Curry functional logic modules proving base-29 involution, reversibility, and signature obligations (`curry/`).
    - Agda constructive type theory specification formalizing modular invariants and involution theorems over \(\mathbb{Z}_{29}\) (`agda/`). Total computational kernels only — no postulates or holes in the core.
 3. **Sovereign Kernels**: Pure R and J integer array kernels for radix-scaled residual folds and explicit DAG reductions (`kernels/`).
-4. **Ontology & Semantics**: 5-layer OWL/RDF ontology enforcing token ranges, closure statements, and candidate self-acceptance prohibitions (`ontology/`).
-5. **Discovery & Provenance**: Canonical byte deduplication engine and provenance index graph (`search/discovery.py`, `evidence/provenance_index.json`).
-6. **Execution Matrix**: GitHub Actions parallel matrix search across affine, reversal, magic square, and prime sequence branches (`.github/workflows/liber-primus-search.yml`).
-7. **Agent Orchestrator**: Google Jules autonomous session dispatcher (`.github/workflows/jules-dispatch.yml`).
+4. **Mercury DAG PGP**: Integer DAG reduction of the authentic 7A35090F fingerprint over \(\mathbb{Z}_{29}\) (`kernels/pgp/`).
+5. **Ontology & Semantics**: 5-layer OWL/RDF ontology enforcing token ranges, closure statements, and candidate self-acceptance prohibitions (`ontology/`).
+6. **Discovery & Provenance**: Canonical byte deduplication engine and provenance index graph (`search/discovery.py`, `evidence/provenance_index.json`).
+7. **Execution Matrix**: GitHub Actions parallel matrix search across affine, reversal, magic square, and prime sequence branches (`.github/workflows/liber-primus-search.yml`).
+8. **Agent Orchestrator**: Google Jules autonomous session dispatcher (`.github/workflows/jules-dispatch.yml`).
 
 ---
 
@@ -93,15 +104,20 @@ agda agda/GematriaPrimus.agda
 
 ### Run sovereign kernels
 ```bash
-Rscript kernels/sovereign_kernel.R   # source the functions
-jconsole kernels/sovereign_kernel.ijs  # load in J
+Rscript -e 'source("kernels/sovereign_kernel.R"); print(evaluate_training_step(matrix(1:4,2,2), matrix(1:4,2,2), matrix(1:4,2,2)))'
+jconsole kernels/sovereign_kernel.ijs
+```
+
+### Run Mercury DAG PGP reduction
+```bash
+Rscript -e 'source("kernels/pgp/mercury_dag_pgp.R"); print(evaluate_pgp_dag())'
 ```
 
 ---
 
 ## Human correction note
 
-Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations. The pure R and J kernels in `kernels/` are zero-dependency integer array implementations for radix-scaled residual folds and explicit backward DAG reductions.
+Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations. The pure R and J kernels in `kernels/` are zero-dependency integer array implementations for radix-scaled residual folds and explicit backward DAG reductions. The Mercury DAG PGP reduction produces a deterministic modular invariant of the authentic fingerprint; it does not claim to decrypt the 4096-bit RSA key.
 
 ---
 
