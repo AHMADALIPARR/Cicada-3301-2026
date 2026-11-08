@@ -2,7 +2,7 @@
 
 Constructive type-theoretic models for the Cicada 3301 Liber Primus invariants over ℤ/29ℤ.
 
-![Gematria Primus](../docs/gematria-primus.svg)
+![Gematria Primus](../docs/gematria-primus.png)
 
 ## Modules
 
