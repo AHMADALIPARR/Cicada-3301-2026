@@ -35,8 +35,19 @@ search_hypothesis(magic_square, Tokens, Result) :-
 
 % 4. Prime-sequence and numerical-grid relationships
 search_hypothesis(prime_sequence, Tokens, Result) :-
-    maplist(rune_prime, Tokens, Primes),
-    Result = search_result(prime_sequence, 1, [primes(Primes)]).
+    findall(offset_result(Offset, Decoded),
+            ( between(0, 28, Offset),
+              findall(D,
+                      ( nth0(I, Tokens, Tok),
+                        PIdx is (I + Offset) mod 29,
+                        rune_prime(PIdx, Prime),
+                        D is (Tok - (Prime mod 29) + 29) mod 29
+                      ),
+                      Decoded)
+            ),
+            OffsetResults),
+    length(OffsetResults, Total),
+    Result = search_result(prime_sequence, Total, OffsetResults).
 
 run_matrix_search(HypothesisName, Result) :-
     % Mock representative sample tokens
