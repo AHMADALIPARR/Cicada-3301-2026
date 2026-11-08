@@ -4,9 +4,14 @@
 
 An automated, deterministic cryptanalysis and formal evidence verification system for the unsolved pages of Cicada 3301's *Liber Primus*.
 
-![Sovereign Kernel Flag](docs/sovereign_kernel_flag.png)
+## Sovereign Kernels (pure R & J)
 
-*Custom flag: pure R and J integer kernels for radix-scaled residual folds and explicit backward DAG reductions. Zero-dependency, exact arithmetic, 0 max absolute error.*
+Zero-dependency integer kernels for radix-scaled residual folds and explicit backward DAG reductions. No compiled wrappers, no floating-point drift.
+
+- **R**: [`kernels/sovereign_kernel.R`](kernels/sovereign_kernel.R) — base-R only (`sovereign_matmul`, `radix_scaled_fold`, `backward_dag_node`, `evaluate_training_step`)
+- **J**: [`kernels/sovereign_kernel.ijs`](kernels/sovereign_kernel.ijs) — pure J primitives (`matmul`, `radix_project`, `backward_dag`, `evaluate_step`)
+
+These map forward reductions to exact backward DAG nodes over integer tensors. Target: 0 max absolute error on routed predictions.
 
 ![Gematria Primus](docs/gematria-primus.png)
 
@@ -54,10 +59,11 @@ To eliminate encoding artifacts across heterogeneous execution runtimes, the ini
 2. **Formal Verification & Invariants**:
    - Curry functional logic modules proving base-29 involution, reversibility, and signature obligations (`curry/`).
    - Agda constructive type theory specification formalizing modular invariants and involution theorems over \(\mathbb{Z}_{29}\) (`agda/`). Total computational kernels only — no postulates or holes in the core.
-3. **Ontology & Semantics**: 5-layer OWL/RDF ontology enforcing token ranges, closure statements, and candidate self-acceptance prohibitions (`ontology/`).
-4. **Discovery & Provenance**: Canonical byte deduplication engine and provenance index graph (`search/discovery.py`, `evidence/provenance_index.json`).
-5. **Execution Matrix**: GitHub Actions parallel matrix search across affine, reversal, magic square, and prime sequence branches (`.github/workflows/liber-primus-search.yml`).
-6. **Agent Orchestrator**: Google Jules autonomous session dispatcher (`.github/workflows/jules-dispatch.yml`).
+3. **Sovereign Kernels**: Pure R and J integer array kernels for radix-scaled residual folds and explicit DAG reductions (`kernels/`).
+4. **Ontology & Semantics**: 5-layer OWL/RDF ontology enforcing token ranges, closure statements, and candidate self-acceptance prohibitions (`ontology/`).
+5. **Discovery & Provenance**: Canonical byte deduplication engine and provenance index graph (`search/discovery.py`, `evidence/provenance_index.json`).
+6. **Execution Matrix**: GitHub Actions parallel matrix search across affine, reversal, magic square, and prime sequence branches (`.github/workflows/liber-primus-search.yml`).
+7. **Agent Orchestrator**: Google Jules autonomous session dispatcher (`.github/workflows/jules-dispatch.yml`).
 
 ---
 
@@ -85,17 +91,22 @@ agda agda/Affine29.agda
 agda agda/GematriaPrimus.agda
 ```
 
+### Run sovereign kernels
+```bash
+Rscript kernels/sovereign_kernel.R   # source the functions
+jconsole kernels/sovereign_kernel.ijs  # load in J
+```
+
 ---
 
 ## Human correction note
 
-Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations. PNG diagrams in `docs/` provide a visual overview of the Gematria Primus alphabet and the modular field.
+Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations. The pure R and J kernels in `kernels/` are zero-dependency integer array implementations for radix-scaled residual folds and explicit backward DAG reductions.
 
 ---
 
-## Diagrams & Flag
+## Diagrams
 
-- [Sovereign Kernel Flag](docs/sovereign_kernel_flag.png) — pure R/J integer kernels, radix-scaled folds, explicit DAG reductions
 - [Banner](docs/banner.png)
 - [Gematria Primus table](docs/gematria-primus.png)
 - [Z/29Z circle](docs/z29-circle.png)
