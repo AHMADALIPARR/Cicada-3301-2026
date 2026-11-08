@@ -4,6 +4,10 @@
 
 An automated, deterministic cryptanalysis and formal evidence verification system for the unsolved pages of Cicada 3301's *Liber Primus*.
 
+![Sovereign Kernel Flag](docs/sovereign_kernel_flag.png)
+
+*Custom flag: pure R and J integer kernels for radix-scaled residual folds and explicit backward DAG reductions. Zero-dependency, exact arithmetic, 0 max absolute error.*
+
 ![Gematria Primus](docs/gematria-primus.png)
 
 ```
@@ -89,8 +93,9 @@ Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated f
 
 ---
 
-## Diagrams
+## Diagrams & Flag
 
+- [Sovereign Kernel Flag](docs/sovereign_kernel_flag.png) — pure R/J integer kernels, radix-scaled folds, explicit DAG reductions
 - [Banner](docs/banner.png)
 - [Gematria Primus table](docs/gematria-primus.png)
 - [Z/29Z circle](docs/z29-circle.png)
