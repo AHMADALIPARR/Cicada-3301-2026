@@ -8,10 +8,8 @@ An automated, deterministic cryptanalysis and formal evidence verification syste
 
 Zero-dependency integer kernels for radix-scaled residual folds and explicit backward DAG reductions. No compiled wrappers, no floating-point drift.
 
-- **R**: [`kernels/sovereign_kernel.R`](kernels/sovereign_kernel.R) — base-R only (`sovereign_matmul`, `radix_scaled_fold`, `backward_dag_node`, `evaluate_training_step`)
-- **J**: [`kernels/sovereign_kernel.ijs`](kernels/sovereign_kernel.ijs) — pure J primitives (`matmul`, `radix_project`, `backward_dag`, `evaluate_step`)
-
-These map forward reductions to exact backward DAG nodes over integer tensors. Target: 0 max absolute error on routed predictions.
+- **R**: [`kernels/sovereign_kernel.R`](kernels/sovereign_kernel.R)
+- **J**: [`kernels/sovereign_kernel.ijs`](kernels/sovereign_kernel.ijs)
 
 ## Mercury DAG PGP Reduction
 
@@ -19,9 +17,14 @@ Deterministic integer DAG fold of the authentic Cicada 3301 public key fingerpri
 
 - Key ID: `7A35090F`
 - Fingerprint: `6D854CD7933322A601C3286D181F01E57A35090F`
-- Implementation: [`kernels/pgp/mercury_dag_pgp.R`](kernels/pgp/mercury_dag_pgp.R)
+- Files: [`kernels/pgp/`](kernels/pgp/)
 
-The reduction produces a reproducible modular invariant. It does not decrypt or factor the 4096-bit RSA modulus. The file `evidence/raw/cicada_3301.asc` is a truncated stub; the fingerprint above is the authentic public value.
+Includes:
+- `mercury_dag_pgp.R` — radix fold + DAG trace
+- `verify_known.R` — fingerprint check against the published 2012 signed message
+- `grover_sim.R` — classical simulation of Grover search on \(\mathbb{Z}_{29}\) using the integer kernel fold as the oracle
+
+Grover's algorithm does not make factoring or decrypting 4096-bit RSA practical. Keyservers were unreachable when these files were added; signature verification still requires a local gpg install and the public key. The file `evidence/raw/cicada_3301.asc` is a truncated stub.
 
 ![Gematria Primus](docs/gematria-primus.png)
 
@@ -104,20 +107,22 @@ agda agda/GematriaPrimus.agda
 
 ### Run sovereign kernels
 ```bash
-Rscript -e 'source("kernels/sovereign_kernel.R"); print(evaluate_training_step(matrix(1:4,2,2), matrix(1:4,2,2), matrix(1:4,2,2)))'
+Rscript -e 'source("kernels/sovereign_kernel.R")'
 jconsole kernels/sovereign_kernel.ijs
 ```
 
 ### Run Mercury DAG PGP reduction
 ```bash
 Rscript -e 'source("kernels/pgp/mercury_dag_pgp.R"); print(evaluate_pgp_dag())'
+Rscript -e 'source("kernels/pgp/verify_known.R"); print(check_fingerprint())'
+Rscript -e 'source("kernels/pgp/grover_sim.R"); print(demo(11))'
 ```
 
 ---
 
 ## Human correction note
 
-Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations. The pure R and J kernels in `kernels/` are zero-dependency integer array implementations for radix-scaled residual folds and explicit backward DAG reductions. The Mercury DAG PGP reduction produces a deterministic modular invariant of the authentic fingerprint; it does not claim to decrypt the 4096-bit RSA key.
+Human correction of Gemini 3.8 hallucination noise experiment. Agent-generated formal stubs in `agda/` previously contained broken modular reduction, pure postulates, unfilled holes, and incomplete pattern matches. Those have been replaced with total computational kernels that match the Curry reference implementations. The pure R and J kernels in `kernels/` are zero-dependency integer array implementations for radix-scaled residual folds and explicit backward DAG reductions. The Mercury DAG PGP reduction and Grover simulation produce deterministic modular invariants of the authentic fingerprint; they do not claim to decrypt the 4096-bit RSA key.
 
 ---
 
