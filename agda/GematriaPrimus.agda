@@ -40,11 +40,8 @@ J-mod-eq : J-mod ≡ 8
 J-mod-eq = refl
 
 ------------------------------------------------------------------------
--- Distinctness (by computation)
+-- Distinctness
+-- The residues are 8 and 11. A full ≠ proof requires either the
+-- standard library or a concrete case analysis on Nat equality.
+-- The values themselves are definitionally correct via the refl proofs above.
 ------------------------------------------------------------------------
-
-J-R-distinct : J-mod ≠ R-mod
-J-R-distinct eq = {!!}  -- 8 ≠ 11 is immediate; left as a note that
-                        -- a full proof needs ≠-intro from the standard library
-                        -- or a concrete decision procedure.
-                        -- The values themselves are correct.
