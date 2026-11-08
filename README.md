@@ -9,6 +9,14 @@ No candidate is allowed to accept itself. Every transformation is required to be
 
 **Status (as of the current tree):** 230 candidate evaluations recorded, 0 verified accepted solutions, 4 false paths closed, 226 unresolved. Affine-29 search completed; reverse, magic-square, and pure prime-sequence branches either refuted or left open under the cryptographic gates.
 
+
+
+## Manuscript Pages
+
+![Liber Primus page A](assets/liber-primus-page-a.png)
+
+![Liber Primus page B](assets/liber-primus-page-b.png)
+
 ---
 
 ## Philosophical and Technical Stance
