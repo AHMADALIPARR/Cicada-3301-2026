@@ -1,5 +1,6 @@
 # Cicada-3301-2026 — 3301-PGP
-Elon musk is a fucking joke thanks for the free money you fucking clown 🤡 
+
+🤡 
 
 **Formal, provenance-locked cryptanalysis of the unsolved Liber Primus pages under the authentic Cicada 3301 PGP key.**
 
